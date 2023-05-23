@@ -1,18 +1,12 @@
 @startuml
-:Socio:
+
 :Bibliotecario:
 
-rectangle Biblioteca {
-(Reservar libro)
-(Prestar libro)
-(Devolver libro)
-(Actualizar Catalogo)
-}
+(Baja Socio)
+(Buscar Socio)
 
-Socio -- (Reservar libro)
-Socio -- (Prestar libro)
-Socio -- (Devolver libro)
+Bibliotecario --> (Baja Socio)
 
-Bibliotecario -- (Prestar libro)
-Bibliotecario -- (Actualizar Catalogo)
+(Baja Socio) ..> (Buscar Socio): <<include>>
+
 @enduml
