@@ -1,12 +1,9 @@
 @startuml
+:Agente:
 
-:Bibliotecario:
+(Evaluar Solicitud de credito)
+(Solicitar informacion adicional al cliente)
 
-(Baja Socio)
-(Buscar Socio)
-
-Bibliotecario --> (Baja Socio)
-
-(Baja Socio) ..> (Buscar Socio): <<include>>
-
+(Solicitar informacion adicional al cliente) ..> (Evaluar Solicitud de credito) : <<extend>>
+Agente --> (Evaluar Solicitud de credito)
 @enduml
