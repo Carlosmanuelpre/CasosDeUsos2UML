@@ -1,9 +1,12 @@
 @startuml
 :Agente:
 
-(Evaluar Solicitud de credito)
-(Solicitar informacion adicional al cliente)
+(Enviar solicitud)
+(Enviar solicitud credito personal)
+(Enviar solicitud credito empresarial)
 
-(Solicitar informacion adicional al cliente) ..> (Evaluar Solicitud de credito) : <<extend>>
-Agente --> (Evaluar Solicitud de credito)
+Agente --> (Enviar solicitud)
+(Enviar solicitud credito personal) --|> (Enviar solicitud)
+(Enviar solicitud credito empresarial) --|> (Enviar solicitud)
+
 @enduml
