@@ -1,12 +1,29 @@
 @startuml
-:Agente:
+:Empleado:
+:Administrador:
 
-(Enviar solicitud)
-(Enviar solicitud credito personal)
-(Enviar solicitud credito empresarial)
+rectangle Empresap {
+(introducir pedidos)
+(Cancelar pedido)
+(Obtener estado pedido)
+(Borrar Pedido)
+(Buscar Pedidos)
+(Alta cliente)
+(Buscar Cliente)
+(Nuevo producto)
+(Borrar Producto)
+}
 
-Agente --> (Enviar solicitud)
-(Enviar solicitud credito personal) --|> (Enviar solicitud)
-(Enviar solicitud credito empresarial) --|> (Enviar solicitud)
+
+Empleado -- (introducir pedidos)
+Empleado -- (Cancelar pedido)
+Empleado --  (Obtener estado pedido)
+Empleado -- (Borrar Pedido)
+Empleado -- (Buscar Pedidos)
+Empleado -- (Alta cliente)
+Empleado -- (Buscar Cliente)
+
+Administrador -- (Nuevo producto)
+Administrador -- (Borrar Producto)
 
 @enduml
