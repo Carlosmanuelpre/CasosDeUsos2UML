@@ -1,29 +1,31 @@
 @startuml
 :Empleado:
-:Administrador:
 
-rectangle Empresap {
+
 (introducir pedidos)
 (Cancelar pedido)
 (Obtener estado pedido)
-(Borrar Pedido)
 (Buscar Pedidos)
 (Alta cliente)
 (Buscar Cliente)
-(Nuevo producto)
-(Borrar Producto)
-}
+(Pago con tarjeta)
+(Pago en cuenta)
+
 
 
 Empleado -- (introducir pedidos)
 Empleado -- (Cancelar pedido)
 Empleado --  (Obtener estado pedido)
-Empleado -- (Borrar Pedido)
 Empleado -- (Buscar Pedidos)
 Empleado -- (Alta cliente)
-Empleado -- (Buscar Cliente)
 
-Administrador -- (Nuevo producto)
-Administrador -- (Borrar Producto)
+(Alta cliente) ..>(introducir pedidos) : <<extend>>
+(introducir pedidos) ..> (Buscar Cliente) : <<include>>
+(Pago con tarjeta)..> (introducir pedidos) : <<extend>>
+(Cancelar pedido) ..> (Buscar Pedidos) : <<include>>
+(introducir pedidos) <..(Pago en cuenta) : <<extend>>
+(Obtener estado pedido) ..> (Buscar Pedidos) : <<include>>
+
+
 
 @enduml
